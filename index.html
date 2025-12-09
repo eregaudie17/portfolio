@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image" href="/images/icon_site4.png" />
@@ -8,227 +8,64 @@
     <title>Portfolio Emmanuel Regaudie</title>
   </head>
   <body class="bg-gray-50">
-    <!-- Navigation Header -->
     <header class="sticky top-0 bg-white shadow-md z-50">
-      <nav class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-xl sm:text-2xl font-bold text-gray-900">ER</h1>
-        <button class="md:hidden" id="menu-toggle">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-        <ul class="hidden md:flex gap-6">
-          <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">À propos</a></li>
-          <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projets</a></li>
-          <li><a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Compétences</a></li>
-          <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a></li>
+      <nav
+        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold text-gray-900">Emmanuel Regaudie</h1>
+        <ul class="flex gap-6">
+          <li>
+            <a href="#about" class="text-gray-700 hover:text-blue-600"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="text-gray-700 hover:text-blue-600"
+              >Projets</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="text-gray-700 hover:text-blue-600"
+              >Contact</a
+            >
+          </li>
         </ul>
       </nav>
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden border-t">
-        <ul class="flex flex-col gap-3 px-4 py-4">
-          <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition block py-2">À propos</a></li>
-          <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition block py-2">Projets</a></li>
-          <li><a href="#skills" class="text-gray-700 hover:text-blue-600 transition block py-2">Compétences</a></li>
-          <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition block py-2">Contact</a></li>
-        </ul>
-      </div>
     </header>
 
     <main>
-      <!-- Hero Section -->
-      <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-blue-100 px-4">
-        <div class="text-center max-w-2xl">
-          <div class="mb-6">
-            <img src="/images/icon_site4.png" alt="Avatar" class="w-24 h-24 rounded-full mx-auto shadow-lg">
-          </div>
-          <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">Emmanuel Regaudie</h2>
-          <p class="text-lg sm:text-xl text-gray-700 mb-2">Développeur Web Full Stack</p>
-          <p class="text-base sm:text-lg text-gray-600 mb-8">
-            Créer des expériences web modernes, performantes et accessibles
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#projects" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-semibold">Voir mes projets</a>
-            <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition font-semibold">Me contacter</a>
-          </div>
-        </div>
+      <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+        <h2 class="text-5xl font-bold text-gray-900 mb-4">Développeur Web</h2>
+        <p class="text-xl text-gray-600 mb-8">
+          Créer des expériences web modernes et performantes
+        </p>
+        <a
+          href="#projects"
+          class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700"
+          >Voir mes projets</a
+        >
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="max-w-4xl mx-auto px-4 py-16 sm:py-20">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">À propos</h2>
-        <div class="bg-white rounded-lg shadow-md p-6 sm:p-8">
-          <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
-            Je suis un développeur web passionné par la création de solutions numériques innovantes et performantes. 
-            Avec une solide expérience en développement frontend et backend, je crée des sites et applications web 
-            modernes, responsifs et accessibles.
-          </p>
-          <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
-            Mon objectif est de transformer des idées en produits web de qualité, en mettant l'accent sur 
-            l'expérience utilisateur et les meilleures pratiques du développement web.
-          </p>
-        </div>
+      <section id="about" class="max-w-6xl mx-auto px-4 py-20">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">À propos</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Bienvenue sur mon portfolio.
+        </p>
       </section>
 
-      <!-- Skills Section -->
-      <section id="skills" class="max-w-4xl mx-auto px-4 py-16 sm:py-20">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">Compétences</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Frontend</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>HTML/CSS</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>JavaScript</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>React / Vue.js</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Tailwind CSS</li>
-            </ul>
-          </div>
-          <div class="bg-white rounded-lg shadow-md p-6">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Backend</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Node.js</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Python</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>Bases de données</li>
-              <li class="flex items-center"><span class="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>API REST</li>
-            </ul>
-          </div>
-        </div>
+      <section id="projects" class="max-w-6xl mx-auto px-4 py-20">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Projets</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </section>
 
-      <!-- Projects Section -->
-      <section id="projects" class="max-w-6xl mx-auto px-4 py-16 sm:py-20">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">Mes Projets</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Project Card 1 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Projet 1</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Description courte de votre premier projet.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">HTML</span>
-                <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">CSS</span>
-              </div>
-              <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 transition">Voir plus →</a>
-            </div>
-          </div>
-
-          <!-- Project Card 2 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <div class="h-48 bg-gradient-to-br from-green-400 to-green-600"></div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Projet 2</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Description courte de votre deuxième projet.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">React</span>
-                <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Tailwind</span>
-              </div>
-              <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 transition">Voir plus →</a>
-            </div>
-          </div>
-
-          <!-- Project Card 3 -->
-          <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
-            <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600"></div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Projet 3</h3>
-              <p class="text-gray-600 text-sm mb-4">
-                Description courte de votre troisième projet.
-              </p>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Node.js</span>
-                <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">MongoDB</span>
-              </div>
-              <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 transition">Voir plus →</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact" class="max-w-4xl mx-auto px-4 py-16 sm:py-20">
-        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Me Contacter</h2>
-        <div class="bg-white rounded-lg shadow-md p-6 sm:p-8">
-          <form class="space-y-6">
-            <div>
-              <label class="block text-gray-700 font-semibold mb-2">Nom</label>
-              <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" placeholder="Votre nom">
-            </div>
-            <div>
-              <label class="block text-gray-700 font-semibold mb-2">Email</label>
-              <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600" placeholder="votre.email@exemple.com">
-            </div>
-            <div>
-              <label class="block text-gray-700 font-semibold mb-2">Message</label>
-              <textarea class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600 h-32" placeholder="Votre message..."></textarea>
-            </div>
-            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
-              Envoyer
-            </button>
-          </form>
-          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:votre.email@exemple.com" class="flex items-center justify-center gap-2 text-gray-700 hover:text-blue-600 transition">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-              Email
-            </a>
-            <a href="#" class="flex items-center justify-center gap-2 text-gray-700 hover:text-blue-600 transition">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.3A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z"></path></svg>
-              LinkedIn
-            </a>
-            <a href="#" class="flex items-center justify-center gap-2 text-gray-700 hover:text-blue-600 transition">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-              GitHub
-            </a>
-        </div>
+      <section id="contact" class="max-w-6xl mx-auto px-4 py-20">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact</h2>
+        <p class="text-gray-700">Me contacter</p>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white mt-20">
-      <div class="max-w-6xl mx-auto px-4 py-12">
-        <div class="text-center mb-6">
-          <h3 class="text-2xl font-bold mb-2">Emmanuel Regaudie</h3>
-          <p class="text-gray-400">Développeur Web Full Stack</p>
-        </div>
-        <div class="border-t border-gray-700 pt-6 text-center">
-          <p class="text-gray-400 text-sm">
-            © 2024 Emmanuel Regaudie. Tous droits réservés.
-          </p>
-        </div>
-      </div>
+    <footer class="bg-gray-900 text-white py-8 text-center">
+      <p>&copy; 2024 Emmanuel Regaudie. Tous droits réservés.</p>
     </footer>
-
-    <script>
-      // Mobile menu toggle
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      // Close menu when link is clicked
-      const mobileLinks = mobileMenu.querySelectorAll('a');
-      mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-
-      // Smooth scroll
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-          }
-        });
-      });
-    </script>
   </body>
 </html>
