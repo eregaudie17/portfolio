@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x' # Utilisez la version nécessaire pour votre projet
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm install # Utilisez npm pour voir si cela résout le problème
+
+    - name: Build the project
+      run: npm run build # Changez cela pour utiliser npm
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist/
