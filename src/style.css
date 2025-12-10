@@ -1,1 +1,127 @@
+@font-face {
+  font-family: "Unbounded";
+  src: url("/public/fonts/Unbounded-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/public/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import "tailwindcss";
+
+@theme inline {
+  --font-family-fftitle: var(--ff-Unbounded);
+  --font-family-ffbody: var(--ff-Montserrat);
+
+  --color-dark: var(--clr-black);
+  --color-midnight-violet: var(--clr-midnight-violet);
+  --color-indigo-velvet: var(--clr-indogo-velvet);
+  --color-slate-blue: var(--clr-slate-blue);
+  --color-soft-periwinkle: var(--clr-soft-periwinkle);
+  --color-pale-slate: var(--clr-pale-slate);
+  --color-linen: var(--clr-linen);
+  --color-bright-snow: var(--clr-bright-snow);
+}
+
+@layer base {
+  :root {
+    --ff-Unbounded: "Unbounded", sans-serif;
+    --ff-Montserrat: "Montserrat", sans-serif;
+
+    --clr-black: #000003ff;
+    --clr-midnight-violet: #242038ff;
+    --clr-indogo-velvet: #3e3173ff;
+    --clr-slate-blue: #725ac1ff;
+    --clr-soft-periwinkle: #8d86c9ff;
+    --clr-pale-slate: #cac4ceff;
+    --clr-linen: #f7ece1ff;
+    --clr-bright-snow: #f8f9fcff;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--ff-Unbounded);
+  }
+
+  ul,
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Responsive improvements */
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Mobile menu styling */
+#mobile-menu {
+  animation: slideDown 0.3s ease-out;
+}
+
+#mobile-menu.hidden {
+  animation: slideUp 0.3s ease-out;
+  display: none;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Ensure images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth transitions */
+a,
+button {
+  transition: all 0.3s ease;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 640px) {
+  a,
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

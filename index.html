@@ -7,65 +7,240 @@
     <link href="/src/style.css" rel="stylesheet" />
     <title>Portfolio Emmanuel Regaudie</title>
   </head>
-  <body class="bg-gray-50">
-    <header class="sticky top-0 bg-white shadow-md z-50">
+  <body class="bg-midnight-violet text-linen font-family-ffbody">
+    <header class="sticky top-0 bg-dark shadow-md z-50">
       <nav
         class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
       >
-        <h1 class="text-2xl font-bold text-gray-900">Emmanuel Regaudie</h1>
-        <ul class="flex gap-6">
+        <h1 class="text-xl sm:text-2xl font-bold text-linen">
+          Emmanuel Regaudie
+        </h1>
+        <button class="md:hidden text-linen" id="menu-toggle">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button>
+        <ul class="hidden md:flex gap-6">
           <li>
-            <a href="#about" class="text-gray-700 hover:text-blue-600"
+            <a href="#about" class="hover:text-slate-blue transition"
               >À propos</a
             >
           </li>
           <li>
-            <a href="#projects" class="text-gray-700 hover:text-blue-600"
+            <a href="#projects" class="hover:text-slate-blue transition"
               >Projets</a
             >
           </li>
           <li>
-            <a href="#contact" class="text-gray-700 hover:text-blue-600"
+            <a href="#contact" class="hover:text-slate-blue transition"
               >Contact</a
             >
           </li>
         </ul>
       </nav>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-slate-blue px-4 py-4"
+      >
+        <ul class="flex flex-col gap-3">
+          <li>
+            <a href="#about" class="block py-2 hover:text-slate-blue transition"
+              >À propos</a
+            >
+          </li>
+          <li>
+            <a
+              href="#projects"
+              class="block py-2 hover:text-slate-blue transition"
+              >Projets</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block py-2 hover:text-slate-blue transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
     </header>
 
     <main>
-      <section class="max-w-6xl mx-auto px-4 py-20 text-center">
-        <h2 class="text-5xl font-bold text-gray-900 mb-4">Développeur Web</h2>
-        <p class="text-xl text-gray-600 mb-8">
-          Créer des expériences web modernes et performantes
+      <section
+        class="flex bg-[url(/public/images/BgTemp.png)] flex-col items-center md:justify-center max-w-full px-4 md:px-15 py-50 sm:py-20 h-screen text-center"
+      >
+        <p class="text-base sm:text-lg md:text-2xl mb-4 md:mb-8 px-2">
+          Bienvenue sur mon portfolio !
         </p>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">
+          Étudiant en BUT Métiers du Multimédia et de l'Internet
+        </h2>
+        <h3 class="text-xs sm:text-xl md:text-2xl font-bold mb-4">
+          Parcours Création Numérique
+        </h3>
         <a
           href="#projects"
-          class="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700"
+          class="flex flex-col text-center justify-center bg-soft-periwinkle text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg hover:bg-midnight-violet transition"
           >Voir mes projets</a
         >
       </section>
 
-      <section id="about" class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">À propos</h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          Bienvenue sur mon portfolio.
-        </p>
+      <section id="about" class="max-w-6xl mx-auto px-4 py-12 sm:py-20">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-6">À propos</h2>
+        <figure
+          class="flex flex-col sm:flex-row gap-4 items-center mb-6 bg-indigo-velvet p-6 rounded-2xl"
+        >
+          <img
+            src="/public/images/Regaudie mmi.JPG"
+            alt="Photo de profil Emmanuel Regaudie"
+            class="rounded-2xl w-55 sm:w-80"
+          />
+          <figcaption
+            class="flex flex-col items-center text-center w-full text-sm sm:text-lg sm:px-12 sm:text-start text-linen"
+          >
+            <p>
+              Bonjour ! Je m'appelle Emmanuel Regaudie, étudiant en 2ème année
+              de BUT Métiers du Multimédia et de l'Internet, parcours Création
+              Numérique. Passionné par le design, les jeux vidéos et le
+              développement web, je crée des visuels et des sites principalement
+              pour les cours mais aussi pour le plaisir.
+            </p>
+            <h4 class="w-full text-start text-lg mt-8">Compétences</h4>
+            <ul
+              class="flex flex-row w-full flex-wrap bg-bright-snow p-2 rounded-2xl items-center justify-center gap-5 mt-4"
+            >
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/illustrator.png"
+                  alt="illustrator logo"
+                />
+                <p class="text-dark">Illustrator</p>
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/photoshop.png"
+                  alt="illustrator logo"
+                />
+                <p class="text-dark">Photoshop</p>
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/aftereffect.png"
+                  alt="illustrator logo"
+                />
+                <p class="text-dark">After Effect</p>
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/premierepro.png"
+                  alt="illustrator logo"
+                />
+                <p class="text-dark">Premiere Pro</p>
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/indesign.png"
+                  alt="illustrator logo"
+                />
+                <p class="text-dark">In Design</p>
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/blender.png"
+                  alt="illustrator logo"
+                />
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/figma.png"
+                  alt="illustrator logo"
+                />
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/HTML5.png"
+                  alt="illustrator logo"
+                />
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/CSS3.png"
+                  alt="illustrator logo"
+                />
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/JS.png"
+                  alt="illustrator logo"
+                />
+              </li>
+              <li class="flex flex-col items-center mb-2 w-12 h-12">
+                <img
+                  src="/public/images/logiciels/TWCSS.png"
+                  alt="illustrator logo"
+                />
+              </li>
+            </ul>
+          </figcaption>
+        </figure>
       </section>
 
-      <section id="projects" class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">Projets</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      <section id="projects" class="max-w-6xl mx-auto px-4 py-12 sm:py-20">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-6">Projets</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </section>
 
       <section id="contact" class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6">Contact</h2>
-        <p class="text-gray-700">Me contacter</p>
+        <h2 class="text-3xl font-bold mb-6">Contact</h2>
+        <p class="">Me contacter</p>
       </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-8 text-center">
-      <p>&copy; 2024 Emmanuel Regaudie. Tous droits réservés.</p>
+    <footer class="bg-dark text-white py-8 text-center">
+      <p>&copy; 2025 Emmanuel Regaudie. Tous droits réservés.</p>
     </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Close menu when a link is clicked
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+    </script>
   </body>
 </html>
