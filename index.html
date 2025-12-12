@@ -10,9 +10,9 @@
   <body class="bg-midnight-violet text-linen font-family-ffbody">
     <header class="sticky top-0 bg-dark shadow-md z-50">
       <nav
-        class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center"
+        class="max-w-full mx-auto sm:mx-20 px-4 py-4 flex justify-between items-center"
       >
-        <h1 class="text-xl sm:text-2xl font-bold text-linen">
+        <h1 class="text-xl sm:text-3xl font-bold text-linen">
           Emmanuel Regaudie
         </h1>
         <button class="md:hidden text-linen" id="menu-toggle">
@@ -79,7 +79,7 @@
 
     <main>
       <section
-        class="flex bg-[url(/public/images/BgTemp.png)] flex-col items-center md:justify-center max-w-full px-4 md:px-15 py-50 sm:py-20 h-screen text-center"
+        class="flex bg-[url(/public/images/BgTemp.png)] flex-col items-center md:justify-center max-w-full px-4 md:px-15 py-50 sm:py-50 md:py-20 h-screen text-center"
       >
         <p class="text-base sm:text-lg md:text-2xl mb-4 md:mb-8 px-2">
           Bienvenue sur mon portfolio !
@@ -100,7 +100,7 @@
       <section id="about" class="max-w-6xl mx-auto px-4 py-12 sm:py-20">
         <h2 class="text-2xl sm:text-3xl font-bold mb-6">À propos</h2>
         <figure
-          class="flex flex-col sm:flex-row gap-4 items-center mb-6 bg-indigo-velvet p-6 rounded-2xl"
+          class="flex flex-col md:flex-row gap-4 items-center mb-6 bg-indigo-velvet p-6 rounded-2xl"
         >
           <img
             src="/public/images/Regaudie mmi.JPG"
@@ -119,78 +119,84 @@
             </p>
             <h4 class="w-full text-start text-lg mt-8">Compétences</h4>
             <ul
-              class="flex flex-row w-full flex-wrap bg-bright-snow p-2 rounded-2xl items-center justify-center gap-5 mt-4"
+              class="flex flex-row w-full flex-wrap bg-bright-snow p-2 rounded-2xl items-center justify-center gap-7 mt-4 py-10"
             >
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/illustrator.png"
                   alt="illustrator logo"
                 />
-                <p class="text-dark">Illustrator</p>
+                <p class="flex flex-col justify-center text-dark h-full text-center">Illustrator</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/photoshop.png"
                   alt="illustrator logo"
                 />
-                <p class="text-dark">Photoshop</p>
+                <p class="text-dark text-center">Photoshop</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/aftereffect.png"
                   alt="illustrator logo"
                 />
-                <p class="text-dark">After Effect</p>
+                <p class="text-dark text-center">After Effect</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/premierepro.png"
                   alt="illustrator logo"
                 />
-                <p class="text-dark">Premiere Pro</p>
+                <p class="text-dark text-center">Premiere Pro</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/indesign.png"
                   alt="illustrator logo"
                 />
-                <p class="text-dark">In Design</p>
+                <p class="text-dark text-center">In Design</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/blender.png"
                   alt="illustrator logo"
                 />
+                <p class="text-dark text-center">Blender</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/figma.png"
                   alt="illustrator logo"
                 />
+                <p class="text-dark text-center">Figma</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/HTML5.png"
                   alt="illustrator logo"
                 />
+                <p class="text-dark text-center">HTML</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/CSS3.png"
                   alt="illustrator logo"
                 />
+                <p class="text-dark text-center">CSS</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/JS.png"
                   alt="illustrator logo"
-                />
+                  />
+                  <p class="text-dark text-center">JavaScipt</p>
               </li>
-              <li class="flex flex-col items-center mb-2 w-12 h-12">
+              <li class="flex flex-col items-center mb-7 w-12 h-12 sm:w-16 sm:h-16 sm:mx-5 sm:mb-8">
                 <img
                   src="/public/images/logiciels/TWCSS.png"
                   alt="illustrator logo"
                 />
+                <p class="text-dark text-center">Tailwind CSS</p>
               </li>
             </ul>
           </figcaption>
@@ -202,9 +208,48 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
       </section>
 
-      <section id="contact" class="max-w-6xl mx-auto px-4 py-20">
-        <h2 class="text-3xl font-bold mb-6">Contact</h2>
-        <p class="">Me contacter</p>
+      <section id="contact" class="max-w-6xl mx-auto px-4 py-12 sm:py-20">
+        <h2 class="text-2xl sm:text-3xl font-bold mb-8 text-center">Contact</h2>
+        <div class="bg-soft-periwinkle rounded-lg shadow-lg p-8 sm:p-12 max-w-2xl mx-auto">
+          <div class="space-y-6">
+            <!-- Email -->
+            <div class="flex items-center justify-center sm:justify-start">
+              <svg class="w-6 h-6 mr-4 text-dark" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+              <div>
+                <p class="text-dark font-semibold">Email</p>
+                <a href="mailto:emmanuel@example.com" class="text-dark hover:text-midnight-violet transition">
+                  emmanuelregaudie5@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center justify-center sm:justify-start">
+              <svg class="w-6 h-6 mr-4 text-dark" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773c.26.559.934 1.42 2.4 2.952.466.466.982.742 1.56.788.578.046 1.294.172 2.405-.141l.928-1.379a1 1 0 011.146-.264l4.038 1.972a1 1 0 01.28 1.601l-1.513 2.02a1 1 0 01-.837.3 1.025 1.025 0 01-.199-.02c-1.164-.236-2.852-.584-4.666-2.398-1.814-1.814-2.162-3.502-2.398-4.666a1.026 1.026 0 01.02-.199 1 1 0 01.3-.837l2.02-1.513a1 1 0 01.601.28l1.972 4.038a1 1 0 01-.264 1.146l-1.379.928c-.313.93-.188 1.627-.142 2.405.046.578.322 1.094.788 1.56 1.532 1.466 2.393 2.14 2.952 2.4.313.16.69.188 1.06-.54l.773-1.548a1 1 0 011.06-.54l4.435.74a1 1 0 01.836.986v2.153a1 1 0 01-1 1H4a1 1 0 01-1-1V3z"></path>
+              </svg>
+              <div>
+                <p class="text-dark font-semibold">Téléphone</p>
+                <a href="tel:+33612345678" class="text-dark hover:text-midnight-violet transition">
+                  +33 7 64 37 61 69
+                </a>
+              </div>
+            </div>
+
+            <!-- CV Download -->
+            <div class="flex items-center justify-center sm:justify-start pt-4 border-t border-dark">
+              <svg class="w-6 h-6 mr-4 text-dark" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5.5 13a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.3A4.5 4.5 0 1113.5 13H11V9.413l1.293 1.293a1 1 0 001.414-1.414l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13H5.5z"></path>
+              </svg>
+              <button id="download-cv" class="text-dark font-semibold hover:text-midnight-violet transition cursor-pointer">
+                Télécharger mon CV
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -241,6 +286,20 @@
           }
         });
       });
+
+      // Download CV functionality
+      const downloadCVBtn = document.getElementById("download-cv");
+      if (downloadCVBtn) {
+        downloadCVBtn.addEventListener("click", function () {
+          // Créez un élément <a> temporaire pour déclencher le téléchargement
+          const link = document.createElement("a");
+          link.href = "/CV_Emmanuel_Regaudie.pdf"; // Remplacez par le chemin de votre CV
+          link.download = "CV_Emmanuel_Regaudie.pdf"; // Nom du fichier téléchargé
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
     </script>
   </body>
 </html>
