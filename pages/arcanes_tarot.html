@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="../images/icon_site4.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../src/style.css" rel="stylesheet" />
+    <title>Projet - Emmanuel Regaudie</title>
+  </head>
+  <body class="bg-midnight-violet text-linen font-family-ffbody">
+    <header class="sticky top-0 bg-dark shadow-md z-50">
+      <nav
+        class="max-w-full mx-auto sm:mx-20 px-4 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-xl sm:text-3xl font-bold text-linen">
+          <a href="/" class="hover:text-slate-blue transition">Emmanuel Regaudie</a>
+        </h1>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-12 sm:py-20">
+      <!-- Back Button -->
+      <a href="../" class="inline-flex items-center text-soft-periwinkle hover:text-slate-blue hover:-translate-x-3.5 transition mb-8">
+        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+        </svg>
+        Retour aux projets
+      </a>
+
+      <!-- Project Content -->
+      <div class="bg-soft-periwinkle rounded-lg shadow-lg overflow-hidden">
+        <img src="../public/images/Covers/tarot.png" alt="Projet Arcanes de Tarot" class="w-full h-96 object-cover" />
+        
+        <div class="p-8 text-midnight-violet">
+          <h1 class="text-4xl font-bold">Arcanes de Tarot</h1>
+          <p class="text-lg mb-6">2024 - Projet Universitaire</p>
+          
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold mb-4">Techniques & Outils</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-midnight-violet text-linen px-4 py-2 rounded-lg">Adobe Illustrator</span>
+              <span class="bg-midnight-violet text-linen px-4 py-2 rounded-lg">Adobe Photoshop</span>
+              <span class="bg-midnight-violet text-linen px-4 py-2 rounded-lg">Flat Design</span>
+            </div>
+          </div>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Ce projet était l'un des tout permiers réalisés avec Illustrator et Photoshop. L'objectif était de
+            créer un jeu d'arcanes de tarot, donc 22 cartes, sous chacun des deux logiciels et ce en une semaine. 
+            Évidemment, la tâche était bien trop ambitieuse pour le temps imparti, surtout que le début la semaine 
+            comprenait aussi la partie recherche.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Durant cette partie de recherche, j'ai du choisir un artiste vectoriel (Illustrator) et un artiste matriciel (Photoshop)
+            qui m'inspiraient pour la création de mes cartes. J'ai appris à recopier leur style respectif afin de le réutiliser 
+            pour créer mes propres illustrations. J'ai donc choisi <a href="https://smirapdesigns.com" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-velvet">
+            Mike Karolos</a> pour Illustrator et <a href="https://www.johngalldesign.com" target="_blank" rel="noopener noreferrer" class="font-bold text-indigo-velvet">John Gall</a> 
+            pour Photoshop.
+          </p>
+          
+          <div class="mb-8">
+            <h3 class="text-2xl font-bold mb-4">Galerie</h3>
+            <div class="flex flex-col w-full items-center">
+              <div class="relative flex flex-col w-fit bg-midnight-violet py-7 px-12 rounded-lg items-center">
+              <div class="overflow-hidden max-w-96 rounded-lg">
+                <div class="carousel flex transition-transform duration-300" id="carousel">
+                <!-- Images will be loaded here by JavaScript -->
+                </div>
+              </div>
+              <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-midnight-violet text-linen p-2 text-3xl cursor-pointer" onclick="prevSlide()">❮</button>
+              <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-midnight-violet text-linen p-2 text-3xl cursor-pointer" onclick="nextSlide()">❯</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark text-white py-8 text-center mt-12">
+      <p>&copy; 2025 Emmanuel Regaudie. Tous droits réservés.</p>
+    </footer>
+
+            <script>
+            let currentIndex = 0;
+            const images = [
+              '../public/images/cartes_tarot/le_diable.png',
+              '../public/images/cartes_tarot/la_justice.png',
+              '../public/images/cartes_tarot/la_lune.png',
+              '../public/images/cartes_tarot/la_mort.png',
+              '../public/images/cartes_tarot/le_jugement.png',
+              '../public/images/cartes_tarot/la_maison_de_dieu.png',
+              '../public/images/cartes_tarot/dos.png',
+            ];
+
+            function loadCarousel() {
+              const carousel = document.getElementById('carousel');
+              images.forEach((img, index) => {
+              const imgEl = document.createElement('img');
+              imgEl.src = img;
+              imgEl.alt = `Carte ${index + 1}`;
+              imgEl.className = 'w-full  object-cover flex-shrink-0';
+              carousel.appendChild(imgEl);
+              });
+            }
+
+            function updateCarousel() {
+              const carousel = document.getElementById('carousel');
+              carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+
+            function nextSlide() {
+              currentIndex = (currentIndex + 1) % images.length;
+              updateCarousel();
+            }
+
+            function prevSlide() {
+              currentIndex = (currentIndex - 1 + images.length) % images.length;
+              updateCarousel();
+            }
+
+            loadCarousel();
+            </script>
+  </body>
+</html>

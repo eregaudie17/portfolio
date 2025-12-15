@@ -1,3 +1,0 @@
-# Netlify redirects for clean URLs
-/pages/projet1 /pages/projet1.html 200
-/projet1 /pages/projet1.html 200

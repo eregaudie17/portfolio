@@ -9,7 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        projet1: resolve(__dirname, "pages/projet1.html"),
+        projet1: resolve(__dirname, "pages/arcanes_tarot.html"),
+        projet2: resolve(__dirname, "pages/carte_touristique.html"),
       },
     },
   },

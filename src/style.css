@@ -22,7 +22,7 @@
 
   --color-dark: var(--clr-black);
   --color-midnight-violet: var(--clr-midnight-violet);
-  --color-indigo-velvet: var(--clr-indogo-velvet);
+  --color-indigo-velvet: var(--clr-indigo-velvet);
   --color-slate-blue: var(--clr-slate-blue);
   --color-soft-periwinkle: var(--clr-soft-periwinkle);
   --color-pale-slate: var(--clr-pale-slate);
@@ -37,7 +37,7 @@
 
     --clr-black: #000003ff;
     --clr-midnight-violet: #242038ff;
-    --clr-indogo-velvet: #3e3173ff;
+    --clr-indigo-velvet: #3e3173ff;
     --clr-slate-blue: #725ac1ff;
     --clr-soft-periwinkle: #8d86c9ff;
     --clr-pale-slate: #cac4ceff;
