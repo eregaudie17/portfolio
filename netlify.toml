@@ -7,10 +7,12 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Redirect for SPA - mais exclure les pages HTML existantes
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  conditions = { Not = ["{path}"] }
 
 [dev]
   command = "npm run dev"
