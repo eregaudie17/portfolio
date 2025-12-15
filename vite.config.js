@@ -4,7 +4,7 @@ import { resolve } from "path";
 
 export default defineConfig({
   plugins: [tailwindcss()],
-  base: "/eregaudie17.github.io/",
+  base: "/https://regaudie.netlify.app/",
   build: {
     rollupOptions: {
       input: {
