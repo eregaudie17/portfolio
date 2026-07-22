@@ -4,10 +4,238 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image" href="/public/images/Logo/Logo_S.png" />
     <link rel="stylesheet" href="./src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <title>Emmanuel Regaudie</title>
   </head>
-  <body>
-    <header class="flex h-screen w-full flex-col"></header>
-    <main class="flex h-screen w-full flex-col"></main>
+  <body class="flex min-h-screen w-max flex-col overflow-hidden">
+    <header
+      class="fixed z-20 flex h-screen w-full flex-col items-center justify-center bg-black"
+    ></header>
+    <main id="grid" class="grid h-screen w-fit grid-cols-4 gap-24">
+      <div id="menu-container" class="fixed top-10 right-10 z-30">
+        <button
+          id="menu-toggle"
+          class="cursor-pointer p-2 transition-opacity hover:opacity-80"
+        >
+          <svg
+            id="burger-icon"
+            class="h-8 w-8 stroke-white"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <nav
+          id="menu-nav"
+          class="min-w-48s nav closed glassmorphism absolute top-14 right-5 overflow-hidden"
+        >
+          <ul class="flex flex-col overflow-hidden">
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="Accueil"
+              >
+                Accueil
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="Graphisme"
+              >
+                Graphisme
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="Intégration"
+              >
+                Intégration
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="3D"
+              >
+                3D
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="Motion Design"
+              >
+                Motion Design
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="UX/UI"
+              >
+                UX/UI
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="A propos"
+              >
+                A propos
+              </button>
+            </li>
+            <li class="overflow-hidden">
+              <button
+                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+                data-section="Contact"
+              >
+                Contact
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <section id="Graphisme" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">Graphisme</h2>
+        </div>
+      </section>
+
+      <section id="Intégration" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">Intégration</h2>
+        </div>
+      </section>
+
+      <section id="3D" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">3D</h2>
+        </div>
+      </section>
+
+      <section id="Motion Design" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">Motion Design</h2>
+        </div>
+      </section>
+
+      <section id="UX/UI" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">UX/UI</h2>
+        </div>
+      </section>
+
+      <section id="A propos" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">A propos</h2>
+        </div>
+      </section>
+
+      <section id="Contact" class="h-screen w-screen p-10">
+        <div
+          class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+        >
+          <h2 class="text-5xl font-medium">Contact</h2>
+        </div>
+      </section>
+    </main>
+
+    <script type="module">
+      window.C = {};
+
+      C.start = function () {};
+
+      window.V = {};
+
+      // Navigation menu burger
+      const menuToggle = document.getElementById("menu-toggle");
+      const menuNav = document.getElementById("menu-nav");
+      const burgerIcon = document.getElementById("burger-icon");
+      const menuItems = document.querySelectorAll(".menu-item");
+      const Header = document.querySelector("header");
+
+      let isOpen = false;
+
+      menuToggle.addEventListener("click", () => {
+        if (!isOpen) {
+          menuNav.classList.remove("close");
+          menuNav.classList.add("open");
+
+          burgerIcon.innerHTML =
+            '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+        } else {
+          menuNav.classList.remove("open");
+          menuNav.classList.add("close");
+
+          burgerIcon.innerHTML =
+            '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+        }
+
+        isOpen = !isOpen;
+      });
+
+      menuItems.forEach((item) => {
+        item.addEventListener("click", function () {
+          Header.classList.add("started");
+          Header.classList.remove("reboot");
+          const sectionId = this.getAttribute("data-section");
+          const section = document.getElementById(sectionId);
+          if (section) {
+            if (Header.classList.contains("on")) {
+              section.scrollIntoView({
+                behavior: "smooth",
+                block: "center",
+                inline: "center",
+              });
+            } else {
+              setTimeout(() => {
+                section.scrollIntoView({
+                  behavior: "smooth",
+                  block: "center",
+                  inline: "center",
+                });
+              }, 1000);
+            }
+            Header.classList.add("on");
+          }
+
+          const accueilButton = document.querySelector(
+            '.menu-item[data-section="Accueil"]',
+          );
+          accueilButton.addEventListener("click", () => {
+            Header.classList.remove("started");
+            Header.classList.remove("on");
+            Header.classList.add("reboot");
+          });
+
+          // Close menu and revert to burger icon
+          menuNav.classList.add("open");
+          burgerIcon.innerHTML =
+            '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+        });
+      });
+    </script>
   </body>
 </html>
