@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image" href="/public/images/Logo/Logo_S.png" />
     <link rel="stylesheet" href="./src/style.css" />
     <link
@@ -10,106 +11,112 @@
     />
     <title>Emmanuel Regaudie</title>
   </head>
-  <body class="flex min-h-screen w-max flex-col overflow-hidden">
+  <body class="overflow-hidden overflow-x-clip">
+    <div
+      id="menu-container"
+      class="fixed top-5 right-5 z-30 h-16 w-16 sm:top-10 sm:right-10"
+    >
+      <button
+        id="menu-toggle"
+        class="cursor-pointer p-2 transition-opacity hover:opacity-80"
+      >
+        <svg
+          id="burger-icon"
+          class="h-full w-full stroke-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke-width="2"
+          stroke-linecap="round"
+        >
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+      <nav
+        id="menu-nav"
+        class="min-w-48s nav closed glassmorphism absolute top-14 right-5 overflow-hidden"
+      >
+        <ul class="flex flex-col overflow-hidden">
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="Accueil"
+            >
+              Accueil
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="Graphisme"
+            >
+              Graphisme
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="Intégration"
+            >
+              Intégration
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="3D"
+            >
+              3D
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="Motion-Design"
+            >
+              Motion Design
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="UX-UI"
+            >
+              UX/UI
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="A-propos"
+            >
+              A propos
+            </button>
+          </li>
+          <li class="overflow-hidden">
+            <button
+              class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
+              data-section="Contact"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header
-      class="fixed z-20 flex h-screen w-full flex-col items-center justify-center bg-black"
+      class="fixed z-20 flex h-screen w-screen flex-col items-center justify-center bg-black"
     ></header>
-    <main id="grid" class="grid h-screen w-fit grid-cols-4 gap-24">
-      <div id="menu-container" class="fixed top-10 right-10 z-30">
-        <button
-          id="menu-toggle"
-          class="cursor-pointer p-2 transition-opacity hover:opacity-80"
-        >
-          <svg
-            id="burger-icon"
-            class="h-8 w-8 stroke-white"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke-width="2"
-            stroke-linecap="round"
-          >
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-          </svg>
-        </button>
-        <nav
-          id="menu-nav"
-          class="min-w-48s nav closed glassmorphism absolute top-14 right-5 overflow-hidden"
-        >
-          <ul class="flex flex-col overflow-hidden">
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="Accueil"
-              >
-                Accueil
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="Graphisme"
-              >
-                Graphisme
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="Intégration"
-              >
-                Intégration
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="3D"
-              >
-                3D
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="Motion Design"
-              >
-                Motion Design
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="UX/UI"
-              >
-                UX/UI
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="A propos"
-              >
-                A propos
-              </button>
-            </li>
-            <li class="overflow-hidden">
-              <button
-                class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
-                data-section="Contact"
-              >
-                Contact
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <main
+      id="grid"
+      class="z-0 grid h-screen w-max grid-cols-4 gap-6 overflow-hidden overflow-x-clip sm:gap-24"
+    >
       <section id="Graphisme" class="h-screen w-screen p-10">
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">Graphisme</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">Graphisme</h2>
         </div>
       </section>
 
@@ -117,7 +124,7 @@
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">Intégration</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">Intégration</h2>
         </div>
       </section>
 
@@ -125,31 +132,31 @@
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">3D</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">3D</h2>
         </div>
       </section>
 
-      <section id="Motion Design" class="h-screen w-screen p-10">
+      <section id="Motion-Design" class="h-screen w-screen p-10">
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">Motion Design</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">Motion Design</h2>
         </div>
       </section>
 
-      <section id="UX/UI" class="h-screen w-screen p-10">
+      <section id="UX-UI" class="h-screen w-screen p-10">
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">UX/UI</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">UX/UI</h2>
         </div>
       </section>
 
-      <section id="A propos" class="h-screen w-screen p-10">
+      <section id="A-propos" class="h-screen w-screen p-10">
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">A propos</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">A propos</h2>
         </div>
       </section>
 
@@ -157,7 +164,7 @@
         <div
           class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
         >
-          <h2 class="text-5xl font-medium">Contact</h2>
+          <h2 class="text-4xl font-medium sm:text-5xl">Contact</h2>
         </div>
       </section>
     </main>
