@@ -187,7 +187,11 @@
   }
 }
 
-@keyframes headerAnimationOpen {
+.item--selected {
+  color: var(--color-accent-principal);
+}
+
+@keyframes sectionAnimationOpen {
   0% {
     transform: scale(1) translateY(0);
   }
@@ -199,7 +203,7 @@
   }
 }
 
-@keyframes headerAnimationClose {
+@keyframes sectionAnimationClose {
   0% {
     transform: scale(0.7) translateY(-5000px);
   }
@@ -211,12 +215,12 @@
   }
 }
 
-header.started {
-  animation: headerAnimationOpen 1s ease-in-out forwards;
+section.started {
+  animation: sectionAnimationOpen 1s ease-in-out forwards;
 }
 
-header.reboot {
-  animation: headerAnimationClose 1s ease-in-out forwards;
+section.reboot {
+  animation: sectionAnimationClose 1s ease-in-out forwards;
 }
 
 @keyframes navAnimationOpen {
