@@ -15,7 +15,11 @@
     <section
       id="Accueil"
       class="fixed z-20 flex h-screen w-screen flex-col items-center justify-center bg-black"
-    ></section>
+    >
+    <h1 class="absolute top-10 left-5 sm:left-10 text-2xl sm:text-4xl font-bold">Emmanuel Regaudie</h1>
+      <video id="accueil-video" class="h-full w-full object-cover" autoplay muted playsinline></video>
+    </section>
+    </section>
     <main class="z-0 flex h-screen w-max flex-col overflow-hidden">
       <div
         id="menu-container"
@@ -181,6 +185,45 @@
       C.start = function () {};
 
       window.V = {};
+
+      const accueilVideo = document.getElementById('accueil-video');
+      if (accueilVideo) {
+        // paths: adjust if your videos are located elsewhere
+        const startSrc = '/public/videos/start_site.mp4';
+        const headerSrc = '/public/videos/header_site.mp4';
+
+        // Set the first video and try to play (muted allows autoplay on most browsers)
+        accueilVideo.src = startSrc;
+
+        const tryPlay = () => accueilVideo.play().catch(() => {});
+
+        // When the "start" video ends, switch to the header video and loop it
+        accueilVideo.addEventListener('ended', () => {
+          accueilVideo.src = headerSrc;
+          accueilVideo.loop = true;
+          accueilVideo.load();
+          tryPlay();
+        });
+
+        // Start playback
+        tryPlay();
+      }
+
+      import { animate, splitText, stagger, scrambleText } from 'animejs';
+
+const { chars } = splitText('h1', {
+  chars: { wrap: 'clip' },
+});
+
+animate(chars, {
+  y: [
+    { to: ['100%', '0%'] },
+  ],
+  duration: 750,
+  ease: 'out(3)',
+  delay: stagger(50),
+  loop: false,
+});
 
       // Navigation menu burger
       const menuToggle = document.getElementById("menu-toggle");

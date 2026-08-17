@@ -199,13 +199,13 @@
     transform: scale(0.7) translateY(0);
   }
   100% {
-    transform: scale(0.7) translateY(-5000px);
+    transform: scale(0.7) translateY(-200%);
   }
 }
 
 @keyframes sectionAnimationClose {
   0% {
-    transform: scale(0.7) translateY(-5000px);
+    transform: scale(0.7) translateY(-200%);
   }
   40% {
     transform: scale(0.7) translateY(0);
