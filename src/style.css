@@ -80,6 +80,28 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
   }
 
+  .glassmorphism-btn {
+    /* From https://css.glass */
+    background: rgba(250, 250, 250, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .glassmorphism-btn:hover {
+    /* From https://css.glass */
+    background: rgba(95, 95, 95, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
   .nav {
     transform: scale(0.7) translatex(400px);
   }
@@ -185,6 +207,23 @@
   :target {
     scroll-margin-block: 5ex;
   }
+}
+
+/* ==========================================
+   SCROLLBARS
+   ========================================== */
+
+html,
+body,
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
 }
 
 .item--selected {

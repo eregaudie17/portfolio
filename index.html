@@ -16,9 +16,18 @@
       id="Accueil"
       class="fixed z-20 flex h-screen w-screen flex-col items-center justify-center bg-black"
     >
-    <h1 class="absolute top-10 left-5 sm:left-10 text-2xl sm:text-4xl font-bold">Emmanuel Regaudie</h1>
-      <video id="accueil-video" class="h-full w-full object-cover" autoplay muted playsinline></video>
-    </section>
+      <h1
+        class="absolute top-10 left-5 text-2xl font-bold sm:left-10 sm:text-4xl"
+      >
+        Emmanuel Regaudie
+      </h1>
+      <video
+        id="accueil-video"
+        class="h-full w-full object-cover"
+        autoplay
+        muted
+        playsinline
+      ></video>
     </section>
     <main class="z-0 flex h-screen w-max flex-col overflow-hidden">
       <div
@@ -100,7 +109,7 @@
                 class="menu-item text-primary hover:bg-surface w-full cursor-pointer px-4 py-3 text-left transition-colors"
                 data-section="A-propos"
               >
-                A propos
+                À propos
               </button>
             </li>
             <li class="overflow-hidden">
@@ -115,28 +124,28 @@
         </nav>
       </div>
       <grid
-        id="grid"
+        id="main-grid"
         class="z-0 grid h-screen w-max grid-cols-4 gap-6 overflow-hidden overflow-x-clip sm:gap-24"
       >
-        <section id="Graphisme" class="h-screen w-screen px-8 py-14 sm:p-10">
+        <section id="Graphisme" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
           >
             <h2 class="text-4xl font-medium sm:text-5xl">Graphisme</h2>
           </div>
         </section>
 
-        <section id="Intégration" class="h-screen w-screen px-8 py-14 sm:p-10">
+        <section id="Intégration" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
           >
             <h2 class="text-4xl font-medium sm:text-5xl">Intégration</h2>
           </div>
         </section>
 
-        <section id="3D" class="h-screen w-screen px-8 py-14 sm:p-10">
+        <section id="3D" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
           >
             <h2 class="text-4xl font-medium sm:text-5xl">3D</h2>
           </div>
@@ -144,36 +153,88 @@
 
         <section
           id="Motion-Design"
-          class="h-screen w-screen px-8 py-14 sm:p-10"
+          class="h-screen w-screen px-5 py-14 sm:p-10"
         >
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
           >
             <h2 class="text-4xl font-medium sm:text-5xl">Motion Design</h2>
           </div>
         </section>
 
-        <section id="UX-UI" class="h-screen w-screen px-8 py-14 sm:p-10">
+        <section id="UX-UI" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
           >
             <h2 class="text-4xl font-medium sm:text-5xl">UX/UI</h2>
           </div>
         </section>
 
-        <section id="A-propos" class="h-screen w-screen px-8 py-14 sm:p-10">
+        <section id="A-propos" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
           >
-            <h2 class="text-4xl font-medium sm:text-5xl">A propos</h2>
+            <h2 class="text-4xl font-medium sm:text-5xl">À propos</h2>
           </div>
         </section>
 
-        <section id="Contact" class="h-screen w-screen px-8 py-14 sm:p-10">
+        <section id="Contact" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 overflow-scroll p-5 sm:p-7"
           >
             <h2 class="text-4xl font-medium sm:text-5xl">Contact</h2>
+            <div
+              class="glassmorphism flex h-full w-full flex-col gap-7 p-5 md:p-7 lg:flex-row"
+            >
+              <div
+                class="glassmorphism flex h-fit w-full flex-col gap-7 p-4 lg:h-full"
+              >
+                <h3 class="text-3xl font-bold">Envoyez un message</h3>
+                <form id="contact-form" class="flex flex-col gap-5 px-5">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Nom"
+                    required
+                    class="border-primary focus:border-accent-principal border-b bg-transparent p-1 focus:outline-none"
+                  />
+
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    class="border-primary focus:border-accent-principal border-b bg-transparent p-1 focus:outline-none"
+                  />
+
+                  <textarea
+                    name="message"
+                    placeholder="Message"
+                    required
+                    rows="5"
+                    class="border-primary focus:border-accent-principal border-b bg-transparent p-1 focus:outline-none"
+                  ></textarea>
+
+                  <!-- CAPTCHA -->
+                  <div
+                    class="g-recaptcha"
+                    data-sitekey="6LccTI4tAAAAAEKSf-sO7Ma4ZP3_Ppoxn4TBVSVx"
+                    data-size="compact"
+                  ></div>
+
+                  <button
+                    type="submit"
+                    id="submit-button"
+                    class="text-primary glassmorphism-btn rounded px-4 py-2"
+                  >
+                    Envoyer
+                  </button>
+
+                  <p id="form-status" class="text-sm"></p>
+                </form>
+              </div>
+              <div class="glassmorphism h-full w-full"></div>
+            </div>
           </div>
         </section>
       </grid>
@@ -186,11 +247,11 @@
 
       window.V = {};
 
-      const accueilVideo = document.getElementById('accueil-video');
+      const accueilVideo = document.getElementById("accueil-video");
       if (accueilVideo) {
         // paths: adjust if your videos are located elsewhere
-        const startSrc = '/videos/start_site.mp4';
-        const headerSrc = '/videos/header_site.mp4';
+        const startSrc = "/videos/start_site.mp4";
+        const headerSrc = "/videos/header_site.mp4";
 
         // Set the first video and try to play (muted allows autoplay on most browsers)
         accueilVideo.src = startSrc;
@@ -198,7 +259,7 @@
         const tryPlay = () => accueilVideo.play().catch(() => {});
 
         // When the "start" video ends, switch to the header video and loop it
-        accueilVideo.addEventListener('ended', () => {
+        accueilVideo.addEventListener("ended", () => {
           accueilVideo.src = headerSrc;
           accueilVideo.loop = true;
           accueilVideo.load();
@@ -209,28 +270,28 @@
         tryPlay();
       }
 
-      import { animate, splitText, stagger, scrambleText } from 'animejs';
+      import { animate, splitText, stagger, scrambleText } from "animejs";
 
-const { chars } = splitText('h1', {
-  chars: { wrap: 'clip' },
-});
+      const { chars } = splitText("h1", {
+        chars: { wrap: "clip" },
+      });
 
-animate(chars, {
-  y: [
-    { to: ['100%', '0%'] },
-  ],
-  duration: 750,
-  ease: 'out(3)',
-  delay: stagger(50),
-  loop: false,
-});
+      animate(chars, {
+        y: [{ to: ["100%", "0%"] }],
+        duration: 750,
+        ease: "out(3)",
+        delay: stagger(50),
+        loop: false,
+      });
 
       // Navigation menu burger
       const menuToggle = document.getElementById("menu-toggle");
       const menuNav = document.getElementById("menu-nav");
+      const mainGrid = document.getElementById("main-grid");
       const burgerIcon = document.getElementById("burger-icon");
       const menuItems = document.querySelectorAll(".menu-item");
       const Accueil = document.getElementById("Accueil");
+      const Video = document.getElementById("accueil-video");
 
       let isOpen = false;
 
@@ -252,9 +313,18 @@ animate(chars, {
         isOpen = !isOpen;
       });
 
+      mainGrid.addEventListener("click", () => {
+        menuNav.classList.remove("open");
+        menuNav.classList.add("close");
+
+        burgerIcon.innerHTML =
+          '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
+      });
+
       menuItems.forEach((item) => {
         item.addEventListener("click", function () {
           menuItems.forEach((i) => i.classList.remove("item--selected"));
+          Video.style.opacity = "50%";
           Accueil.classList.add("started");
           this.classList.add("item--selected");
           Accueil.classList.remove("reboot");
@@ -285,6 +355,7 @@ animate(chars, {
           accueilButton.addEventListener("click", () => {
             Accueil.classList.remove("started");
             Accueil.classList.remove("on");
+            Video.style.opacity = "100%";
             Accueil.classList.add("reboot");
 
             menuNav.classList.remove("open");
@@ -301,5 +372,10 @@ animate(chars, {
         });
       });
     </script>
+    <script type="module" src="./src/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>
