@@ -204,6 +204,34 @@
   :target {
     scroll-margin-block: 5ex;
   }
+
+  #grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100vw;
+
+    width: max-content;
+    height: 100vh;
+
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  #grid > section {
+    width: 100vw;
+    height: 100vh;
+
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+
+    box-sizing: border-box;
+  }
 }
 
 /* ==========================================

@@ -125,7 +125,7 @@
       </div>
       <grid
         id="main-grid"
-        class="z-0 grid h-screen w-max grid-cols-4 gap-6 overflow-hidden overflow-x-clip sm:gap-24"
+        class="z-0 grid h-screen w-max grid-cols-4 overflow-hidden overflow-x-clip"
       >
         <section id="Graphisme" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
@@ -190,7 +190,10 @@
                 class="glassmorphism flex h-fit w-full flex-col gap-7 p-4 lg:h-full"
               >
                 <h3 class="text-3xl font-bold">Envoyez un message</h3>
-                <form id="contact-form" class="flex flex-col gap-5 px-4">
+                <form
+                  id="contact-form"
+                  class="flex flex-col gap-5 px-4 lg:overflow-scroll"
+                >
                   <input
                     type="text"
                     name="name"
@@ -321,55 +324,100 @@
           '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
       });
 
+      let currentSection = null;
+
       menuItems.forEach((item) => {
         item.addEventListener("click", function () {
           menuItems.forEach((i) => i.classList.remove("item--selected"));
+
           Video.style.opacity = "50%";
           Accueil.classList.add("started");
+
           this.classList.add("item--selected");
+
           Accueil.classList.remove("reboot");
+
           const sectionId = this.getAttribute("data-section");
           const section = document.getElementById(sectionId);
+
           if (section) {
-            if (Accueil.classList.contains("on")) {
+            // Mémorise la section actuellement affichée
+            currentSection = section;
+
+            const scrollToSection = (smooth = true) => {
               section.scrollIntoView({
-                behavior: "smooth",
+                behavior: smooth ? "smooth" : "instant",
                 block: "center",
                 inline: "center",
               });
+            };
+
+            if (Accueil.classList.contains("on")) {
+              scrollToSection(true);
             } else {
               setTimeout(() => {
-                section.scrollIntoView({
-                  behavior: "smooth",
-                  block: "center",
-                  inline: "center",
-                });
+                scrollToSection(true);
               }, 1000);
             }
+
             Accueil.classList.add("on");
           }
 
-          const accueilButton = document.querySelector(
-            '.menu-item[data-section="Accueil"]',
-          );
-          accueilButton.addEventListener("click", () => {
-            Accueil.classList.remove("started");
-            Accueil.classList.remove("on");
-            Video.style.opacity = "100%";
-            Accueil.classList.add("reboot");
-
-            menuNav.classList.remove("open");
-            menuNav.classList.add("close");
-
-            burgerIcon.innerHTML =
-              '<line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>';
-          });
-
-          // Close menu and revert to burger icon
+          // Ferme le menu
           menuNav.classList.add("open");
+
           burgerIcon.innerHTML =
-            '<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>';
+            '<line x1="18" y1="6" x2="6" y2="18"></line>' +
+            '<line x1="6" y1="6" x2="18" y2="18"></line>';
         });
+      });
+
+      // ==========================================
+      // BOUTON ACCUEIL
+      // ==========================================
+
+      const accueilButton = document.querySelector(
+        '.menu-item[data-section="Accueil"]',
+      );
+
+      accueilButton.addEventListener("click", () => {
+        // On ne garde plus de section active
+        currentSection = null;
+
+        Accueil.classList.remove("started");
+        Accueil.classList.remove("on");
+
+        Video.style.opacity = "100%";
+        Accueil.classList.add("reboot");
+
+        menuNav.classList.remove("open");
+        menuNav.classList.add("close");
+
+        burgerIcon.innerHTML =
+          '<line x1="3" y1="6" x2="21" y2="6"></line>' +
+          '<line x1="3" y1="12" x2="21" y2="12"></line>' +
+          '<line x1="3" y1="18" x2="21" y2="18"></line>';
+      });
+
+      // ==========================================
+      // RECENTRAGE LORS DU REDIMENSIONNEMENT
+      // ==========================================
+
+      let resizeTimeout;
+
+      window.addEventListener("resize", () => {
+        // Pas de section sélectionnée = rien à recentrer
+        if (!currentSection) return;
+
+        clearTimeout(resizeTimeout);
+
+        resizeTimeout = setTimeout(() => {
+          currentSection.scrollIntoView({
+            behavior: "instant",
+            block: "center",
+            inline: "center",
+          });
+        }, 50);
       });
     </script>
     <script type="module" src="./src/main.js"></script>
