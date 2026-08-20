@@ -99,6 +99,90 @@
     cursor: pointer;
   }
 
+  .glassmorphism-card {
+    /* From https://css.glass */
+    background: rgba(250, 250, 250, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .glassmorphism-card:hover {
+    /* From https://css.glass */
+    background: rgb(133, 133, 134);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .tech-label {
+    position: relative;
+    display: inline-block;
+    color: color-mix(in oklab, var(--clr-blanc-casse) 80%, transparent);
+    cursor: help;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    z-index: 1;
+  }
+
+  .tech-label:hover {
+    color: var(--clr-bleu);
+  }
+
+  .tech-tooltip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: max-content;
+    max-width: min(22rem, calc(100vw - 1rem));
+    padding: 0.45rem 0.7rem;
+    border-radius: 10px;
+    background: rgba(24, 24, 27, 0.92);
+    border: 1px solid rgba(250, 250, 250, 0.18);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    color: var(--color-primary);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    line-height: 1.3;
+    text-transform: uppercase;
+    white-space: normal;
+    word-break: break-word;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 9999;
+  }
+
+  .tech-tooltip.visible {
+    opacity: 1;
+  }
+
+  .competences-logos {
+    display: grid;
+    opacity: 1;
+    max-height: 18rem;
+    overflow: hidden;
+    transform: translateY(0);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      max-height 0.35s ease;
+  }
+
+  .competences:not(:hover):not(:focus-within) .competences-logos {
+    display: grid;
+    opacity: 0;
+    max-height: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+  }
+
   .nav {
     transform: scale(0.7) translatex(400px);
   }

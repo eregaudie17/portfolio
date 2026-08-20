@@ -174,9 +174,306 @@
 
         <section id="A-propos" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 p-5 sm:p-7"
           >
             <h2 class="w-fit text-4xl font-medium sm:text-5xl">À propos</h2>
+            <div
+              class="glassmorphism flex h-full w-full flex-col gap-7 overflow-scroll p-5 md:p-7 xl:flex-row"
+            >
+              <div
+                class="glassmorphism flex h-fit w-full flex-col gap-7 p-4 xl:h-full xl:overflow-scroll"
+              >
+                <p class="text-secondary text-sm tracking-[0.2em] uppercase">
+                  Mon univers créatif
+                </p>
+                <h3 class="text-3xl font-bold">
+                  Bienvenue sur mon portfolio !
+                </h3>
+                <div class="flex h-fit w-full flex-col gap-4">
+                  <p class="text-primary/80 text-base leading-relaxed">
+                    Je suis Emmanuel Regaudie, étudiant en troisième année de
+                    BUT
+                    <span
+                      class="tech-label"
+                      tabindex="0"
+                      data-label="Métiers du Multimédia et de l’Internet"
+                      >MMI</span
+                    >
+                    parcours Création Numérique. Passionné par le graphisme,
+                    l’intégration web, le motion design et la 3D, j’aime mettre
+                    en pratique mes compétences pour créer, que ce soit des
+                    interfaces, des animations ou des modèles 3D.
+                  </p>
+                  <p class="text-primary/80 text-base leading-relaxed">
+                    Au fil de mes études, j'ai développé des compétences en
+                    webdesign, intégration HTML/CSS/JavaScript, UX/UI, motion
+                    design, modélisation 3D et création graphique. J'apprécie
+                    particulièrement les projets qui demandent autant de
+                    créativité que de rigueur technique.
+                  </p>
+                  <p class="text-primary/80 text-base leading-relaxed">
+                    En parallèle de mes études, je suis sportif de haut niveau à
+                    l'Université de Limoges et ancien sportif de Pôle Espoir en
+                    Lutte. Le sport m'a appris la discipline, la persévérance,
+                    le travail en équipe et la capacité à performer sous
+                    pression. Des qualités que j'applique chaque jour dans mes
+                    projets numériques.
+                  </p>
+                  <p class="text-primary/80 text-base leading-relaxed">
+                    Aujourd'hui, je cherche à mettre mes compétences au service
+                    de projets stimulants dans l'optique de continuer à
+                    apprendre et à évoluer dans le domaine du numérique.
+                  </p>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div
+                    class="competences glassmorphism-card text-secondary hover:text-accent-principal h-fit w-full rounded p-4 hover:font-semibold"
+                  >
+                    <p class="text-md tracking-[0.12em] uppercase">Graphisme</p>
+                    <grid
+                      class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/graphisme/illustrator.svg"
+                          alt="Illustrator"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Illustrator</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/graphisme/photoshop.svg"
+                          alt="Photoshop"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Photoshop</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/motion/aftereffects.svg"
+                          alt="After Effects"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >After Effects</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/graphisme/indesign.svg"
+                          alt="InDesign"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >InDesign</span
+                        >
+                      </div>
+                    </grid>
+                  </div>
+                  <div
+                    class="competences glassmorphism-card text-secondary hover:text-accent-principal h-fit w-full rounded p-4 hover:font-semibold"
+                  >
+                    <p class="text-md tracking-[0.12em] uppercase">
+                      Intégration Web
+                    </p>
+                    <grid
+                      class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/dev/integration.svg"
+                          alt="Integration"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Integration</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/dev/tailwindcss.svg"
+                          alt="Tailwind CSS"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Tailwind CSS</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/dev/wordpress.svg"
+                          alt="WordPress"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >WordPress</span
+                        >
+                      </div>
+                    </grid>
+                  </div>
+                  <div
+                    class="competences glassmorphism-card text-secondary hover:text-accent-principal h-fit w-full rounded p-4 hover:font-semibold"
+                  >
+                    <p class="text-md tracking-[0.12em] uppercase">3D</p>
+                    <grid
+                      class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/3D/blender.svg"
+                          alt="Blender"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Blender</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/motion/aftereffects.svg"
+                          alt="After Effects"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >After Effects</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/motion/premiere.svg"
+                          alt="Premiere Pro"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Premiere Pro</span
+                        >
+                      </div>
+                    </grid>
+                  </div>
+                  <div
+                    class="competences glassmorphism-card text-secondary hover:text-accent-principal h-fit w-full rounded p-4 hover:font-semibold"
+                  >
+                    <p class="text-md tracking-[0.12em] uppercase">
+                      Motion Design
+                    </p>
+                    <grid
+                      class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
+                    >
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/motion/aftereffects.svg"
+                          alt="After Effects"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >After Effects</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/motion/premiere.svg"
+                          alt="Premiere Pro"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Premiere Pro</span
+                        >
+                      </div>
+                      <div
+                        class="flex flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/motion/davinci.svg"
+                          alt="Davinci Resolve"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Davinci Resolve</span
+                        >
+                      </div>
+                    </grid>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="glassmorphism flex h-fit w-full flex-col items-center justify-center gap-6 p-8 sm:h-full lg:p-12"
+              >
+                <img
+                  src="/images/icons/picture.svg"
+                  alt="Illustration de profil"
+                  class="h-auto w-2/5 rounded-2xl object-cover"
+                />
+                <div class="grid w-full gap-4 sm:grid-cols-3">
+                  <div class="glassmorphism-btn rounded px-3 py-4 text-center">
+                    <p class="text-2xl font-bold">3</p>
+                    <p
+                      class="text-secondary text-xs tracking-[0.12em] uppercase"
+                    >
+                      années d'études
+                    </p>
+                  </div>
+                  <div class="glassmorphism-btn rounded px-3 py-4 text-center">
+                    <p class="text-2xl font-bold">XX</p>
+                    <p
+                      class="text-secondary text-xs tracking-[0.12em] uppercase"
+                    >
+                      projets
+                    </p>
+                  </div>
+                  <div class="glassmorphism-btn rounded px-3 py-4 text-center">
+                    <p class="text-2xl font-bold">100%</p>
+                    <p
+                      class="text-secondary text-xs tracking-[0.12em] uppercase"
+                    >
+                      créatif
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -237,8 +534,28 @@
 
                   <p id="form-status" class="text-sm"></p>
                 </form>
+                <h3 class="text-3xl font-bold">Mon CV</h3>
+                <button
+                  id="download-cv"
+                  class="text-primary glassmorphism-btn flex w-fit max-w-full flex-row items-center justify-around rounded px-6 py-2"
+                >
+                  <img
+                    src="/images/icons/download.svg"
+                    alt="Télécharger"
+                    class="mr-2 h-4 w-4"
+                  />
+                  Télécharger mon CV
+                </button>
               </div>
-              <div class="glassmorphism h-full w-full"></div>
+              <div
+                class="glassmorphism flex h-full w-full flex-col items-center justify-center p-16"
+              >
+                <img
+                  src="/images/icons/picture.svg"
+                  alt="Image"
+                  class="mr-2 h-auto w-3/4"
+                />
+              </div>
             </div>
           </div>
         </section>
@@ -251,6 +568,50 @@
       C.start = function () {};
 
       window.V = {};
+
+      const techLabels = document.querySelectorAll(".tech-label");
+      techLabels.forEach((label) => {
+        const tooltip = document.createElement("div");
+        tooltip.className = "tech-tooltip";
+        tooltip.textContent = label.dataset.label;
+        document.body.appendChild(tooltip);
+
+        const updateTooltipPosition = () => {
+          const rect = label.getBoundingClientRect();
+          const maxWidth = Math.min(window.innerWidth - 16, 320);
+          tooltip.style.maxWidth = `${maxWidth}px`;
+
+          const centerX = Math.min(
+            Math.max(rect.left + rect.width / 2, tooltip.offsetWidth / 2 + 12),
+            window.innerWidth - tooltip.offsetWidth / 2 - 12,
+          );
+
+          const spaceBelow = window.innerHeight - rect.bottom - 12;
+          const spaceAbove = rect.top - 12;
+          const top =
+            spaceBelow >= tooltip.offsetHeight + 12
+              ? rect.bottom + 12
+              : Math.max(12, rect.top - tooltip.offsetHeight - 8);
+
+          tooltip.style.left = `${centerX}px`;
+          tooltip.style.top = `${top}px`;
+        };
+
+        const showTooltip = () => {
+          updateTooltipPosition();
+          tooltip.classList.add("visible");
+        };
+
+        const hideTooltip = () => {
+          tooltip.classList.remove("visible");
+        };
+
+        label.addEventListener("mouseenter", showTooltip);
+        label.addEventListener("mousemove", updateTooltipPosition);
+        label.addEventListener("mouseleave", hideTooltip);
+        label.addEventListener("focus", showTooltip);
+        label.addEventListener("blur", hideTooltip);
+      });
 
       const accueilVideo = document.getElementById("accueil-video");
       if (accueilVideo) {
@@ -421,6 +782,20 @@
           });
         }, 50);
       });
+
+      // Download CV functionality
+      const downloadCVBtn = document.getElementById("download-cv");
+      if (downloadCVBtn) {
+        downloadCVBtn.addEventListener("click", function () {
+          // Créez un élément <a> temporaire pour déclencher le téléchargement
+          const link = document.createElement("a");
+          link.href = "/CV_Emmanuel_Regaudie.pdf"; // Remplacez par le chemin de votre CV
+          link.download = "CV_Emmanuel_Regaudie.pdf"; // Nom du fichier téléchargé
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      }
     </script>
     <script type="module" src="./src/main.js"></script>
 
