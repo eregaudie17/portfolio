@@ -129,25 +129,37 @@
       >
         <section id="Graphisme" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 p-5 sm:p-7"
           >
             <h2 class="w-fit text-4xl font-medium sm:text-5xl">Graphisme</h2>
+            <div
+              id="graphisme-container"
+              class="glassmorphism h-full w-full overflow-scroll p-7"
+            ></div>
           </div>
         </section>
 
         <section id="Intégration" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 p-5 sm:p-7"
           >
             <h2 class="w-fit text-4xl font-medium sm:text-5xl">Intégration</h2>
+            <div
+              id="integration-container"
+              class="glassmorphism h-full w-full overflow-scroll p-7"
+            ></div>
           </div>
         </section>
 
         <section id="3D" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 p-5 sm:p-7"
           >
             <h2 class="w-fit text-4xl font-medium sm:text-5xl">3D</h2>
+            <div
+              id="troisd-container"
+              class="glassmorphism h-full w-full overflow-scroll p-7"
+            ></div>
           </div>
         </section>
 
@@ -156,19 +168,27 @@
           class="h-screen w-screen px-5 py-14 sm:p-10"
         >
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 p-5 sm:p-7"
           >
             <h2 class="w-40 text-4xl font-medium sm:w-fit sm:text-5xl">
               Motion Design
             </h2>
+            <div
+              id="motion-design-container"
+              class="glassmorphism h-full w-full overflow-scroll p-7"
+            ></div>
           </div>
         </section>
 
         <section id="UX-UI" class="h-screen w-screen px-5 py-14 sm:p-10">
           <div
-            class="glassmorphism flex h-full w-full flex-col items-start justify-start p-5 sm:p-7"
+            class="glassmorphism flex h-full w-full flex-col items-start justify-start gap-7 p-5 sm:p-7"
           >
             <h2 class="w-fit text-4xl font-medium sm:text-5xl">UX/UI</h2>
+            <div
+              id="ux-ui-container"
+              class="glassmorphism h-full w-full overflow-scroll p-7"
+            ></div>
           </div>
         </section>
 
@@ -226,6 +246,8 @@
                   </p>
                 </div>
 
+                <h3 class="text-3xl font-bold">Compétences et logiciels</h3>
+
                 <div class="grid gap-4 sm:grid-cols-2">
                   <div
                     class="competences glassmorphism-card text-secondary hover:text-accent-principal h-fit w-full rounded p-4 hover:font-semibold"
@@ -235,7 +257,7 @@
                       class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
                     >
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/graphisme/illustrator.svg"
@@ -248,7 +270,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/graphisme/photoshop.svg"
@@ -261,7 +283,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/motion/aftereffects.svg"
@@ -274,7 +296,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/graphisme/indesign.svg"
@@ -298,7 +320,7 @@
                       class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
                     >
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/dev/integration.svg"
@@ -311,7 +333,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/dev/tailwindcss.svg"
@@ -324,7 +346,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/dev/wordpress.svg"
@@ -334,6 +356,19 @@
                         <span
                           class="text-primary text-center text-xs tracking-[0.08em] uppercase"
                           >WordPress</span
+                        >
+                      </div>
+                      <div
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
+                      >
+                        <img
+                          src="/images/logiciels/dev/figma.svg"
+                          alt="Figma"
+                          class="h-auto w-3/4"
+                        />
+                        <span
+                          class="text-primary text-center text-xs tracking-[0.08em] uppercase"
+                          >Figma</span
                         >
                       </div>
                     </grid>
@@ -346,7 +381,7 @@
                       class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
                     >
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/3D/blender.svg"
@@ -359,7 +394,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/motion/aftereffects.svg"
@@ -372,7 +407,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/motion/premiere.svg"
@@ -396,7 +431,7 @@
                       class="competences-logos mt-6 h-fit w-full grid-cols-2 place-items-center gap-7 pt-2"
                     >
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/motion/aftereffects.svg"
@@ -409,7 +444,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/motion/premiere.svg"
@@ -422,7 +457,7 @@
                         >
                       </div>
                       <div
-                        class="flex flex-col items-center justify-center gap-2"
+                        class="flex h-full w-full flex-col items-center justify-center gap-2"
                       >
                         <img
                           src="/images/logiciels/motion/davinci.svg"
@@ -563,12 +598,6 @@
     </main>
 
     <script type="module">
-      window.C = {};
-
-      C.start = function () {};
-
-      window.V = {};
-
       const techLabels = document.querySelectorAll(".tech-label");
       techLabels.forEach((label) => {
         const tooltip = document.createElement("div");

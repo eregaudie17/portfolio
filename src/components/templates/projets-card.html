@@ -1,0 +1,19 @@
+<figure
+  data-project-id="{{id}}"
+  tabindex="0"
+  role="button"
+  class="glassmorphism-btn hover:text-accent-principal flex h-full w-full flex-col items-center justify-center gap-3 p-5 text-start transition-transform hover:-translate-y-3 hover:shadow-lg"
+>
+  <p class="text-secondary w-full text-sm tracking-[0.2em] uppercase">
+    {{type}}
+  </p>
+  <img
+    src="{{image}}"
+    alt="{{titre}}"
+    class="h-auto w-full rounded-lg object-cover"
+  />
+  <figcaption class="w-full text-start">
+    <h3 class="w-full text-lg font-semibold">{{titre}}</h3>
+    <p class="text-secondary text-sm">{{description}}</p>
+  </figcaption>
+</figure>

@@ -166,8 +166,7 @@
   .competences-logos {
     display: grid;
     opacity: 1;
-    max-height: 18rem;
-    overflow: hidden;
+    max-height: 25rem;
     transform: translateY(0);
     transition:
       opacity 0.3s ease,
@@ -185,6 +184,141 @@
 
   .nav {
     transform: scale(0.7) translatex(400px);
+  }
+
+  .project-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 1.25rem;
+    background: rgba(29, 29, 36, 0.72);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .project-overlay.is-visible {
+    opacity: 1;
+  }
+
+  .project-detail {
+    position: relative;
+    overflow-y: scroll;
+    display: flex;
+    width: min(900px, 100%);
+    max-height: 100%;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: auto;
+    padding: clamp(1.25rem, 4vw, 3rem);
+    transform: translateY(1rem);
+    transition: transform 0.25s ease;
+
+    background: rgba(250, 250, 250, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .is-visible .project-detail {
+    transform: translateY(0);
+  }
+
+  .project-detail-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 999px;
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+
+    background: rgba(250, 250, 250, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    border: 1px solid rgba(250, 250, 250, 0.2);
+  }
+
+  .project-detail-close:hover {
+    background: rgba(250, 250, 250, 0.2);
+  }
+
+  .project-detail-header {
+    display: flex;
+    height: fit-content;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-right: 3rem;
+  }
+
+  .project-detail-cover {
+    width: min(32%, 220px);
+    max-height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .project-detail-content {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .project-detail-image {
+    width: 100%;
+    max-height: 30rem;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .project-detail-video {
+    display: block;
+    width: 100%;
+    max-height: min(32rem, 65vh);
+    border-radius: 10px;
+    background: #09090b;
+    object-fit: contain;
+  }
+
+  .project-detail-field {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .project-detail-field h3 {
+    color: var(--color-secondary);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .project-detail-list {
+    display: grid;
+    gap: 0.3rem;
+    padding-left: 1.25rem;
+    list-style: disc;
+  }
+
+  .project-is-open {
+    overflow: hidden;
+  }
+
+  @media (max-width: 640px) {
+    .project-detail-header {
+      flex-direction: column;
+    }
+
+    .project-detail-cover {
+      width: 100%;
+      max-height: 180px;
+    }
   }
 }
 
