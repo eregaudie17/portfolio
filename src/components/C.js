@@ -1,7 +1,4 @@
-const templateFile = await fetch(
-  "./src/components/templates/projets-detail.html",
-);
-const templateDetail = await templateFile.text();
+import templateDetail from "./templates/projets-detail.html?raw";
 
 const escapeHtml = (value) =>
   String(value)

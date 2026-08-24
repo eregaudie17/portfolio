@@ -1,14 +1,7 @@
 import { C } from "../C.js";
 
-const templateFile = await fetch(
-  "./src/components/templates/projets-grid.html",
-);
-const templateGrid = await templateFile.text();
-
-const templateFile2 = await fetch(
-  "./src/components/templates/projets-card.html",
-);
-const templateCard = await templateFile2.text();
+import templateGrid from "../templates/projets-grid.html?raw";
+import templateCard from "../templates/projets-card.html?raw";
 
 let TroisD = {};
 
