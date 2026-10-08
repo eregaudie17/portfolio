@@ -25,7 +25,7 @@ const formatMedia = (value) => {
   }
 
   if (/\.(avif|gif|jpe?g|png|svg|webp)(\?.*)?$/i.test(media.src)) {
-    return `<img class="project-detail-image" src="${escapeHtml(media.src)}" alt="" />`;
+    return `<img class="project-detail-image ${escapeHtml(media.class)}" src="${escapeHtml(media.src)}" alt="" />`;
   }
 
   return null;
@@ -39,10 +39,13 @@ const formatContent = (content) =>
         .map((item) => {
           const media = formatMedia(item);
           if (media) return media;
-          return `<p>${escapeHtml(item)}</p>`;
+          return `<p class="w-full">${item.replace(
+            /<a\s+href=(?:['"])([^'"]+)(?:['"])>(.*?)<\/a>/gi,
+            '<a href="$1" target="_blank" rel="noopener noreferrer">$2</a>',
+          )}</p>`;
         })
         .join("");
-      return `<section class="project-detail-field"><h3>${escapeHtml(key)}</h3>${html}</section>`;
+      return `<section class="project-detail-field"><h3 class="w-full">${escapeHtml(key)}</h3>${html}</section>`;
     })
     .join("");
 

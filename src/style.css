@@ -271,8 +271,6 @@
   }
 
   .project-detail-image {
-    width: 100%;
-    max-height: 30rem;
     border-radius: 10px;
     object-fit: cover;
   }
@@ -287,7 +285,9 @@
   }
 
   .project-detail-field {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 0.35rem;
   }
 
