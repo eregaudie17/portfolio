@@ -47,7 +47,7 @@ let DataGraphisme = [
     image: "/images/projet-covers/graphisme/metiers_ceramique.png",
     titre: "Illustrations des métiers de la céramique",
     description:
-      "Création d'illustrations représentant des travailleurs du monde de la céramique de Limoges'.",
+      "Création d'illustrations représentant des travailleurs du monde de la céramique de Limoges.",
     projet: {
       date: "Octobre 2026",
       introduction:
