@@ -13,27 +13,27 @@ let DataGraphisme = [
       livrables: [
         {
           src: "/images/flyers_hiero/Affiche_AVR-MAI-JUIN_Recto.png",
-          class: "w-2/3",
+          class: "w-full sm:w-2/3",
         },
         {
           src: "/images/flyers_hiero/Affiche_AVR-MAI-JUIN_BIS.png",
-          class: "w-2/3 mb-10",
+          class: "w-full sm:w-2/3 mb-10",
         },
         {
           src: "/images/flyers_hiero/Affiche_JUI-AOU-SEP_Recto.png",
-          class: "w-2/3",
+          class: "w-full sm:w-2/3",
         },
         {
           src: "/images/flyers_hiero/Affiche_JUI-AOU-SEP_BIS.png",
-          class: "w-2/3 mb-10",
+          class: "w-full sm:w-2/3 mb-10",
         },
         {
           src: "/images/flyers_hiero/Affiche_OCT-NOV-DEC_Recto.png",
-          class: "w-2/3",
+          class: "w-full sm:w-2/3",
         },
         {
           src: "/images/flyers_hiero/Affiche_OCT-NOV-DEC_BIS.png",
-          class: "w-2/3 mb-10",
+          class: "w-full sm:w-2/3 mb-10",
         },
       ],
       explications:
@@ -71,23 +71,6 @@ let DataGraphisme = [
         "Pour réaliser ces illustrations, j'ai commencé par faire des recherches sur les métiers de la céramique à Limoges, en me renseignant sur les différentes étapes de la production des céramiques traditionnelles et techniques, et sur les outils utilisés par les travailleurs. J'ai ensuite fait les illustration en flat design sur Illustrator, puis j'ai découpé des morceaux dans la forme pour préparer mon style Paper Cut. J'ai utilisé des couleurs vives et contrastées, et j'ai ajouté une texture de papier canson pour donner un aspect plus réaliste aux illustrations. Enfin, j'ai ajouté des ombres portées pour donner de la profondeur aux illustrations.",
       conclusion:
         "Je suis plutôt content de mes illustrations, malgré le changement de logiciel qui m'a fait perdre du temps et m'a limité à trois livrables. J'ai pu apprendre à utiliser Affinity Studio Vector, et j'ai pu développer mon style graphique en expérimentant avec le style Paper Cut, style que je trouve très intéressant du point de vue esthétique.",
-    },
-  },
-  {
-    type: "Universitaire",
-    image: "/images/projet-covers/graphisme/tarot.png",
-    titre: "Arcanes de Tarot",
-    description: "Création d'un jeu de tarot personnalisé pour un client.",
-    projet: {
-      images: [
-        {
-          src: "/images/projets/graphisme/tarot/tarot-1.png",
-          class: "w-1/2",
-        },
-      ],
-      introduction: "Présentation du projet",
-      outils: "Figma, Photoshop",
-      conclusion: "Bilan du projet",
     },
   },
 ];
